@@ -1,4 +1,4 @@
-import UsersSection from '@/components/Users/UsersSections';
+import UsersSection from '@/components/Users/UsersSections'
 
 export default function Home() {
   

@@ -1,4 +1,4 @@
-import PatientsSection from '@/components/PatientsSection/PatientsSection';
+import PatientsSection from '@/components/CreateUser/CreateUser'
 
 export default function Home() {
   

@@ -1,67 +1,80 @@
-// Importação dos módulos necessários do Next.js
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-// Importação dos ícones e imagens necessárias para a barra de navegação
-import Logo from '../../public/assets/icons/Logo.png';
-import IconBlocks from '../../public/assets/icons/blocks.png';
-import IconEqualizer from '../../public/assets/icons/Equalizer.png';
-import IconGroupChat from '../../public/assets/icons/GroupChat.png';
+// Importando o logo e ícones
+import Logo from '../../public/assets/icons/Logo.png'
+import IconBlocks from '../../public/assets/icons/blocks.png'
+import IconEqualizer from '../../public/assets/icons/Equalizer.png'
+import IconGroupChat from '../../public/assets/icons/GroupChat.png'
 
-// Definição dos itens do menu de navegação
+// Interface para itens do menu de navegação
 const menuItems = [
-    { text: 'Users', href: '/' },
-    { text: 'Patients', href: '/PatientsSection' },
-    { text: 'Hospitals', href: '/' },
-    { text: 'Notice', href: '/' },
-    { text: 'Help Center', href: '/' },
+    { text: 'Usuários', href: '/' },
+    { text: 'Pacientes', href: '#' },
+    { text: 'Hospitais', href: '#' },
+    { text: 'Avisos', href: '#' },
+    { text: 'Centro de Ajuda', href: '#' },
 ];
 
-// Componente funcional principal para a barra de navegação
+// Componente Navbar
 export default function Navbar() {
     return (
         <>
-            {/* Container da barra de navegação */}
-            <div className="w-screen bg-[#285430] h-16 text-white">
-                <div className="p-5 grid grid-cols-2">
-                    {/* Seção do logo e navegação */}
-                    <div className='flex'>
-                        <div className='px-10 mr-12'>
-                            {/* Uso do componente Image do Next.js para exibir o logo */}
+            {/* Barra de navegação */}
+            <nav className="w-screen bg-[#285430] text-white">
+                {/* Contêiner para o logo, itens do menu e informações do usuário */}
+                <div className="p-5 flex flex-col sm:flex-row items-center justify-between">
+
+                    {/* Logo e menu principal */}
+                    <div className='flex items-center gap-4'>
+                        <div className='px-4 sm:px-10 mr-4'>
                             <Image src={Logo} alt="logo..." />
                         </div>
-
-                        {/* Navegação: Mapeiamento sos itens do menu e criação dos links para cada um */}
-                        <div className='flex gap-14'>
+                        
+                        {/* Itens do menu principal */}
+                        <div className='flex gap-4'>
                             {menuItems.map((item, index) => (
-                                <Link key={index} href={item.href} passHref legacyBehavior>
-                                    <a className={`rounded-3xl h-12`}>
+                                <Link key={index} href={item.href} passHref>
+                                    <span className={`rounded-3xl h-12 sm:inline hidden`}>
                                         {item.text}
-                                    </a>
+                                    </span>
                                 </Link>
                             ))}
                         </div>
                     </div>
 
-                    {/* Seção de configurações: Ícones com links para diferentes páginas */}
-                    <div className='col-end-7 col-span-2'>
-                        <div className='flex gap-6'>
-                            {/* Cada ícone é um link para uma página específica */}
-                            <Link href='/'>
-                                <Image src={IconBlocks} alt="Blocks.." />
+                    {/* Ícones e informações do usuário */}
+                    <div className='flex gap-4'>
+                        {/* Seção de ícones */}
+                        <div className='flex gap-3 md:mt-3'>
+                            <Link href='#'>
+                                <Image src={IconBlocks} alt="Blocos.." />
                             </Link>
 
-                            <Link href='/'>
-                                <Image src={IconEqualizer} alt="Equalizer.." />
+                            <Link href='#'>
+                                <Image src={IconEqualizer} alt="Equalizador.." />
                             </Link>
 
-                            <Link href='/'>
-                                <Image src={IconGroupChat} alt="GroupChat.." />
+                            <Link href='#'>
+                                <Image src={IconGroupChat} alt="Chat em Grupo.." />
                             </Link>
+                        </div>
+
+                        {/* Seção de informações do usuário */}
+                        <div className='flex items-center gap-2'>
+                            <div className='flex flex-col items-end'>
+                                <span className="hidden sm:inline">Marvin McKinney</span>
+                                <span className="font-thin">Admin</span>
+                            </div>
+
+                            {/* Imagem do perfil do usuário */}
+                            <div className='bg-[#396140] w-16 h-10 p-2 rounded-[6px] border-white flex items-center justify-center'>
+                                <img src='caminho-para-sua-imagem.jpg' alt='M' className='w-4' />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </>
     );
 }
