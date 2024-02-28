@@ -2,7 +2,7 @@ PT:
 # Documentação do projecto
 ## Teste técnico - Desenvolvedor frontend
 
-Este projecto tem como objectivo avalaiar as minhas habilidades em desenvolvimento fronend utilizando o Next.js e TypeScript, o mesmo conta com um projecto Figma fornecido e a integração da simulação de dados de uma API à minha escolha.
+Este projecto tem como objectivo avalaiar as minhas habilidades em desenvolvimento fronend utilizando o Next.js e TypeScript, o mesmo conta com um projecto  [Figma](https://www.figma.com/file/CeRoxkJLRx0ttepu7XeMMl/Kans-%F0%9F%8F%A5-%7C-Hospital-Management-System-(SaaS)-(Community)?type=design&node-id=0-1&mode=design&t=jgTewhPmhdPwEPIy-0) fornecido e a integração da simulação de dados de uma API à minha escolha.
 
 ## Descrição breve:
 
@@ -51,7 +51,7 @@ EN:
 # Project documentation
 ## Technical Testing - Frontend Developer
 
-This project aims to evaluate my skills in fronend development using Next.js and TypeScript, it has a Figma project provided and the integration of data simulation from an API of my choice.
+This project aims to evaluate my skills in fronend development using Next.js and TypeScript, it has a  [Figma](https://www.figma.com/file/CeRoxkJLRx0ttepu7XeMMl/Kans-%F0%9F%8F%A5-%7C-Hospital-Management-System-(SaaS)-(Community)?type=design&node-id=0-1&mode=design&t=jgTewhPmhdPwEPIy-0) project provided and the integration of data simulation from an API of my choice.
 
 ## Brief description:
 
