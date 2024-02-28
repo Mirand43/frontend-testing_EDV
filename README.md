@@ -1,10 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+PT:
+# Documentação do projecto
+## Teste técnico - Desenvolvedor frontend
 
-## Getting Started
+Este projecto tem como objectivo avalaiar as minhas habilidades em desenvolvimento fronend utilizando o Next.js e TypeScript, o mesmo conta com um projecto Figma fornecido e a integração da simulação de dados de uma API à minha escolha.
 
-First, run the development server:
+## Descrição breve:
 
-```bash
+O mesmo projecto tem como objectivo apresentar uma lista de profissionais de saúde cadastrados dentro do sistema, podendo apontar para a quantidade de profissionais e apresentar quantos estão ativos e quantos não, podendo apresentar o nome, id, email, número de telefone, data de registo e o estado do mesmo, sendo é    possível adicionar um novo usuário.
+
+
+## Instalação:
+1. Clone este repositório para o seu ambiente de desenvolvimento local;
+2. Faça a instalação das dependencias do projecto fazendo uso do comando
+npm install;
+
+## Como usar:
+1. Abra a pasta do projecto em um terminar (podendo ser o terminar do seu editor de código ou não);
+2. Pelo terminar digite:
+
 npm run dev
 # or
 yarn dev
@@ -12,25 +25,73 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+para inicializar o servidor do projecto;
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. No url do seu navegador digite: [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Configuração:
 
-## Learn More
+O projecto está configurado da seguinte maneira:
+- Em public é possível localizar uma para pasta assets em assets é poss+ivel encontrar todos os
+assets do projecto, como icons e imagens: 
+    - Caminho para imagens: './public/assets/icons';
+    - Caminho para icons: './public/assets/icons';
 
-To learn more about Next.js, take a look at the following resources:
+- No diretório ./src/app encontramos:
+    - CreateUser é o direitório com a function para criação (cadastro) de usuários;
+    - Users é o direitório com a funstion para apresentar a lista de usuários;
+    - Components é o diretório responsável por armazenar os componentes que podem ser reutilizado
+    nas functions;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contactos:
+´+244 926 243 958 | antoniomq99@gmil.com´
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+EN:
+# Project documentation
+## Technical Testing - Frontend Developer
 
-## Deploy on Vercel
+This project aims to evaluate my skills in fronend development using Next.js and TypeScript, it has a Figma project provided and the integration of data simulation from an API of my choice.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Brief description:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The same project aims to present a list of health professionals registered within the system, being able to point to the number of professionals and display how many are active and how many are not, being able to display the name, ID, email, telephone number, date of registration and its status, and it is possible to add a new user.
+
+
+## Installation:
+1. Clone this repository to your local development environment;
+2. Install the project's dependencies using the command
+npm install;
+
+## How to use:
+1. Open the project folder in a terminal (may be your code editor's terminal or not);
+2. When finished, type:
+
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+
+to initialize the project server;
+
+3. In your browser's url type: [http://localhost:3000](http://localhost:3000)
+
+## Settings:
+
+The project is configured as follows:
+- In public it is possible to find an assets folder in assets it is possible to find all
+project assets, such as icons and images:
+     - Path to images: './public/assets/icons';
+     - Path to icons: './public/assets/icons';
+
+- In the ./src/app directory we find:
+     - CreateUser is the directory with the function for creating (registering) users;
+     - Users is the directory with the funstion to display the list of users;
+     - Components is the directory responsible for storing components that can be reused
+     in functions;
+
+## Contacts:
+'+244 926 243 958 | antoniomq99@gmil.com´
