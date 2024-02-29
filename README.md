@@ -35,7 +35,7 @@ para inicializar o servidor do projecto;
 O projecto está configurado da seguinte maneira:
 - Em public é possível localizar uma para pasta assets em assets é poss+ivel encontrar todos os
 assets do projecto, como icons e imagens: 
-    - Caminho para imagens: './public/assets/icons';
+    - Caminho para imagens: './public/assets/image';
     - Caminho para icons: './public/assets/icons';
 
 - No diretório ./src/app encontramos:
@@ -86,7 +86,7 @@ to initialize the project server;
 The project is configured as follows:
 - In public it is possible to find an assets folder in assets it is possible to find all
 project assets, such as icons and images:
-     - Path to images: './public/assets/icons';
+     - Path to images: './public/assets/image';
      - Path to icons: './public/assets/icons';
 
 - In the ./src/app directory we find:
