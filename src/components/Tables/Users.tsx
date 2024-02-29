@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Avatar from '../../../public/assets/image/Avatar.png';
 import Image from 'next/image';
 import IconButton from '../../../public/assets/icons/Button.png';
-import api from '../../services/Api.tsx'; // Certifique-se de que este caminho está correto
+import api from '../../services/Api';
+import CircularProgress from '@mui/material/CircularProgress'
 
 // Interface que define a estrutura dos dados do usuário
 interface UserData {
@@ -72,7 +73,10 @@ const Tables: React.FC = () => {
                     {/* Renderizar os dados da API na tabela */}
                     {loading ? (
                         // Se ainda estiver carregando, exibir mensagem
-                        <div>A carregar...</div>
+                        <div className="text-center">
+                            <CircularProgress />
+                            <small className='ml-4 mt-2'>Carregando dados...</small>
+                        </div>
                     ) : (
                         // Se o carregamento estiver concluído, mapear os dados para as linhas da tabela
                         data.map((userData) => (
@@ -91,7 +95,7 @@ const Tables: React.FC = () => {
                                 </td>
                                 {/* Renderizar outras colunas com os dados correspondentes */}
                                 <td className="py-2 px-10">{userData.codigo}</td>
-                                <td className="py-2 px-10">brooklyns@gmail.com</td>
+                                <td className="py-2 px-10">exemplo1234@gmail.com</td>
                                 <td className="py-2 px-10">(603) {userData.numero_ato}</td>
                                 <td className="py-2 px-10">
                                     <div className=''>

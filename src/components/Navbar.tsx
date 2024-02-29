@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-// Importando o logo e ícones
 import Logo from '../../public/assets/icons/Logo.png'
 import IconBlocks from '../../public/assets/icons/blocks.png'
 import IconEqualizer from '../../public/assets/icons/Equalizer.png'
