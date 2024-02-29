@@ -25,8 +25,13 @@ const CreateUser = () => {
         </div>
       </div>
 
-      <div className='p-10 px-36'>
-        <h1>Patients Section</h1>
+      {/* Seção principal de cadastro */}
+      <div className='flex items-center justify-center mt-14'>
+
+        {/* Formulário de cadastro de usuários */}
+        <div className='p-10'>
+          
+        </div>
       </div>
     </div>
   )
