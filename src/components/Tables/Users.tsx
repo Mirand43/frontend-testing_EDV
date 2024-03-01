@@ -117,9 +117,7 @@ const Tables: React.FC = () => {
                             </tr>
                         ))
                     )} */}
-
-                
-                        // Se o carregamento estiver concluído, mapear os dados para as linhas da tabela
+                    
                             <tr className="text-sm">
                                 <td className="py-2 px-14">
                                     {/* Conteúdo da primeira coluna */}
