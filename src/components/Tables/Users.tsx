@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+// @refresh reset
+import React, { useState, useEffect } from 'react';
 import Avatar from '../../../public/assets/image/Avatar.png';
 import Image from 'next/image';
 import IconButton from '../../../public/assets/icons/Button.png';
 import api from '../../services/Api';
-import CircularProgress from '@mui/material/CircularProgress'
+import CircularProgress from '@mui/material/CircularProgress';
 
 // Interface que define a estrutura dos dados do usuário
 interface UserData {
@@ -53,7 +54,7 @@ const Tables: React.FC = () => {
 
         fetchData(); // Chamar a função para buscar dados quando o componente montar
     }, []); // O segundo parâmetro (array vazio) garante que useEffect só seja chamado uma vez, equivalente a componentDidMount
-
+    
     return (
         <div className="overflow-x-auto">
             <table className="min-w-full bg-white">
@@ -71,35 +72,36 @@ const Tables: React.FC = () => {
                 </thead>
                 <tbody>
                     {/* Renderizar os dados da API na tabela */}
-                    {loading ? (
-                        // Se ainda estiver carregando, exibir mensagem
+                    {/* {loading ? (
+                        // Se ainda estiver carregando exibir mensagem
                         <div className="text-center">
                             <CircularProgress />
                             <small className='ml-4 mt-2'>Carregando dados...</small>
                         </div>
                     ) : (
                         // Se o carregamento estiver concluído, mapear os dados para as linhas da tabela
-                        data.map((userData) => (
-                            <tr className="text-sm" key={userData.codigo}>
+                        data.map((data) => (
+                            <tr className="text-sm" key={data.codigo}>
                                 <td className="py-2 px-14">
-                                    {/* Conteúdo da primeira coluna */}
+                                    // Conteúdo da primeira coluna
                                     <div className='flex x-space-2 gap-4'>
                                         <div>
                                             <Image src={Avatar} alt="Avatar" />
                                         </div>
                                         <div className='mt-2'>
-                                            <span className='font-semibold'>{userData.tipo_ato}</span><br />
-                                            <span className='text-[#B5B5C3]'>{userData.descricao}</span>
+                                            <span className='font-semibold'>{data.tipo_ato}</span><br />
+                                            <span className='text-[#B5B5C3]'>{data.descricao}</span>
                                         </div>
                                     </div>
                                 </td>
-                                {/* Renderizar outras colunas com os dados correspondentes */}
-                                <td className="py-2 px-10">{userData.codigo}</td>
+
+                                //Renderizar outras colunas com os dados correspondentes
+                                <td className="py-2 px-10">{data.codigo}</td>
                                 <td className="py-2 px-10">exemplo1234@gmail.com</td>
-                                <td className="py-2 px-10">(603) {userData.numero_ato}</td>
+                                <td className="py-2 px-10">(603) {data.numero_ato}</td>
                                 <td className="py-2 px-10">
                                     <div className=''>
-                                        <span>{userData.data_inicio}</span><br />
+                                        <span>{data.data_inicio}</span><br />
                                         <span className='text-sm text-[#B5B5C3]'>10:40 PM</span>
                                     </div>
                                 </td>
@@ -113,6 +115,48 @@ const Tables: React.FC = () => {
                                 </td>
                             </tr>
                         ))
+                    )} */}
+
+                    {loading ? (
+                        // Se ainda estiver carregando exibir mensagem
+                        <div className="text-center">
+                            <CircularProgress />
+                            <small className='ml-4 mt-2'>Carregando dados...</small>
+                        </div>
+                    ) : (
+                        // Se o carregamento estiver concluído, mapear os dados para as linhas da tabela
+                            <tr className="text-sm">
+                                <td className="py-2 px-14">
+                                    {/* Conteúdo da primeira coluna */}
+                                    <div className='flex x-space-2 gap-4'>
+                                        <div>
+                                            <Image src={Avatar} alt="Avatar" />
+                                        </div>
+                                        <div className='mt-2'>
+                                            <span className='font-semibold'>António Quintas</span><br />
+                                            <span className='text-[#B5B5C3]'>Doctor</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                {/* Renderizar outras colunas com os dados correspondentes */}
+                                <td className="py-2 px-10">12345678</td>
+                                <td className="py-2 px-10">exemplo1234@gmail.com</td>
+                                <td className="py-2 px-10">(603) 999 999</td>
+                                <td className="py-2 px-10">
+                                    <div className=''>
+                                        <span>20/01/2023</span><br />
+                                        <span className='text-sm text-[#B5B5C3]'>10:40 PM</span>
+                                    </div>
+                                </td>
+                                <td className="py-2 px-10">
+                                    <div className='bg-[#F4FFF3] rounded-[6px] h-10 flex items-center justify-center'>
+                                        <span className='p-4  text-[#5F8D4E]'>Approved</span>
+                                    </div>
+                                </td>
+                                <td className="py-2 px-6">
+                                    <Image src={IconButton} alt="Icon" />
+                                </td>
+                            </tr>
                     )}
                 </tbody>
             </table>
