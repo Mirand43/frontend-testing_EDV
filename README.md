@@ -47,6 +47,8 @@ assets do projecto, como icons e imagens:
 ## Contactos:
 ´+244 926 243 958 | antoniomq99@gmil.com´
 
+Link do projecto: https://frontend-testing-edv.vercel.app/
+
 
 
 EN:
@@ -97,3 +99,5 @@ project assets, such as icons and images:
 
 ## Contacts:
 '+244 926 243 958 | antoniomq99@gmil.com´
+
+Link of project: https://frontend-testing-edv.vercel.app/
