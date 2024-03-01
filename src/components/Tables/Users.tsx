@@ -1,23 +1,24 @@
 // @refresh reset
-import React, { useState, useEffect } from 'react';
-import Avatar from '../../../public/assets/image/Avatar.png';
-import Image from 'next/image';
-import IconButton from '../../../public/assets/icons/Button.png';
-import api from '../../services/Api';
-import CircularProgress from '@mui/material/CircularProgress';
+//import React, { useState, useEffect } from 'react'
+import React from 'react'
+import Avatar from '../../../public/assets/image/Avatar.png'
+import Image from 'next/image'
+import IconButton from '../../../public/assets/icons/Button.png'
+//import api from '../../services/Api'
+import CircularProgress from '@mui/material/CircularProgress'
 
 // Interface que define a estrutura dos dados do usuário
-interface UserData {
+/*interface UserData {
     codigo: string;
     descricao: string;
     data_inicio: string;
     tipo_ato: string;
     numero_ato: string;
-}
+}*/
 
 const Tables: React.FC = () => {
     // Estado para armazenar os dados da API e o status de carregamento
-    const [data, setData] = useState<UserData[]>([]);
+   /* const [data, setData] = useState<UserData[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -53,7 +54,7 @@ const Tables: React.FC = () => {
         };
 
         fetchData(); // Chamar a função para buscar dados quando o componente montar
-    }, []); // O segundo parâmetro (array vazio) garante que useEffect só seja chamado uma vez, equivalente a componentDidMount
+    }, []); // O segundo parâmetro (array vazio) garante que useEffect só seja chamado uma vez, equivalente a componentDidMount*/
     
     return (
         <div className="overflow-x-auto">
@@ -117,13 +118,7 @@ const Tables: React.FC = () => {
                         ))
                     )} */}
 
-                    {loading ? (
-                        // Se ainda estiver carregando exibir mensagem
-                        <div className="text-center">
-                            <CircularProgress />
-                            <small className='ml-4 mt-2'>Carregando dados...</small>
-                        </div>
-                    ) : (
+                
                         // Se o carregamento estiver concluído, mapear os dados para as linhas da tabela
                             <tr className="text-sm">
                                 <td className="py-2 px-14">
@@ -157,7 +152,6 @@ const Tables: React.FC = () => {
                                     <Image src={IconButton} alt="Icon" />
                                 </td>
                             </tr>
-                    )}
                 </tbody>
             </table>
         </div>
