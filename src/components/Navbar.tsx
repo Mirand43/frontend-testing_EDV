@@ -7,11 +7,11 @@ import IconGroupChat from '../../public/assets/icons/GroupChat.png'
 
 // Interface para itens do menu de navegação
 const menuItems = [
-    { text: 'Usuários', href: '/' },
-    { text: 'Pacientes', href: '#' },
-    { text: 'Hospitais', href: '#' },
-    { text: 'Avisos', href: '#' },
-    { text: 'Centro de Ajuda', href: '#' },
+    { text: 'Users', href: '/' },
+    { text: 'Patients', href: '#' },
+    { text: 'Hospitals', href: '#' },
+    { text: 'Warnings', href: '#' },
+    { text: 'Help Center', href: '#' },
 ];
 
 // Componente Navbar
@@ -32,7 +32,8 @@ export default function Navbar() {
                         {/* Itens do menu principal */}
                         <div className='flex gap-4'>
                             {menuItems.map((item, index) => (
-                                <Link key={index} href={item.href} passHref>
+                                <Link key={index} href={item.href} passHref className={`aria-[current=page]:rounded-3xl aria-[current=page]:h-12
+                                aria-[current=page]:bg-white aria-[current=page]:text-[#285430]`}>
                                     <span className={`rounded-3xl h-12 sm:inline hidden`}>
                                         {item.text}
                                     </span>
